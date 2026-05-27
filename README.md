@@ -17,7 +17,6 @@ BioBrain reduce la fricción entre:
 
 ![Interfaz de Sincronización en Tiempo Real](assets/panel01.png)
 
-
 ---
 
 ## Problema
@@ -169,21 +168,6 @@ Su enfoque principal es:
 - interpretación estructural,
 - organización contextual,
 - representación navegable de arquitecturas de software.
-
----
-
-## Dirección futura
-
-Las siguientes etapas incluyen:
-
-- soporte para Go y TypeScript,
-- escaneo incremental,
-- reportes HTML/PDF,
-- métricas comparativas por lenguaje,
-- mejoras en análisis semántico,
-- visualización avanzada de arquitectura,
-- optimización para monorepos grandes.
-
 ---
 
 ## Estado del repositorio
