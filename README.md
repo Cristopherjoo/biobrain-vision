@@ -1,190 +1,110 @@
-# Vision — BioBrain Poliglota
+# 🧠 BioBrain Poliglota
 
-## Introducción
+BioBrain es un sistema de análisis estático que transforma código fuente en una representación estructural jerárquica del software.
 
-BioBrain es una herramienta de análisis estructural y semántico diseñada para transformar bases de código complejas en representaciones organizadas, navegables y procesables.
-
-El objetivo del sistema no es generar código ni reemplazar desarrolladores, sino facilitar la comprensión de arquitecturas de software mediante extracción estructural, indexación contextual y análisis semántico offline.
-
-BioBrain reduce la fricción entre:
-- el código fuente,
-- la comprensión humana,
-- y los sistemas externos que requieren interpretar estructuras de software de manera eficiente.
+Su objetivo es facilitar la comprensión de arquitecturas complejas mediante la extracción de componentes como clases, funciones, métodos y dependencias, generando un mapa navegable del sistema.
 
 ---
 
-## Imagen 1 (Vista general del sistema)
+## 🌍 Qué hace
 
-![Interfaz de Sincronización en Tiempo Real](assets/panel01.png)
+BioBrain convierte un proyecto de software en una estructura organizada que representa su arquitectura interna sin modificar el código original.
 
----
+Esta representación puede ser utilizada para:
 
-## Problema
-
-A medida que los sistemas crecen, aumenta la dificultad para:
-
-- comprender la estructura global del sistema,
-- visualizar relaciones entre módulos,
-- mantener documentación actualizada,
-- integrar IA sobre bases de código reales,
-- navegar arquitecturas grandes sin perder contexto.
-
-Las herramientas existentes suelen:
-- depender de servicios cloud,
-- mezclar análisis con generación de código,
-- priorizar automatización sobre interpretabilidad.
-
-BioBrain propone un enfoque distinto:
-- análisis estructural primero,
-- representaciones interpretables,
-- IA local,
-- persistencia estructural del conocimiento del sistema.
+- documentación técnica  
+- análisis arquitectónico  
+- exploración de bases de código  
+- integración con herramientas de IA  
+- visualización de estructuras de software  
 
 ---
 
-## Objetivo del proyecto
+## 🖥️ Interfaz del sistema
 
-BioBrain busca funcionar como una capa intermedia entre:
+### 📂 Panel de escaneo
 
-- proyectos de software,
-- motores de análisis,
-- sistemas de visualización,
-- herramientas de IA local.
+![Panel de escaneo del sistema](assets/panel01.png)
 
-Su propósito es convertir código fuente en una representación estructurada reutilizable que pueda alimentar:
+Este panel permite seleccionar un proyecto y ejecutar el análisis estructural del código fuente.
 
-- documentación técnica,
-- análisis semántico,
-- clustering lógico,
-- motores externos,
-- sistemas de visualización,
-- o capas de inteligencia contextual.
+Muestra en tiempo real la detección del lenguaje, extracción de componentes y generación del índice estructural.
 
 ---
 
-## Imagen 2 (Ejemplo de salida)
+### 🧠 Panel de respuesta de IA local
 
-![Estructura de Indexación Contextual Reutilizable](assets/panel02.png)
+![Respuesta de IA local](assets/panel02.png)
 
+Este panel muestra el resultado del análisis semántico realizado por la IA local.
 
----
-
-## Estado actual del proyecto — v3.0.0
-
-BioBrain actualmente incluye:
-
-### Capacidades implementadas
-
-- Extracción AST para Python
-- Parsing Java mediante Tree-sitter
-- Detección automática de lenguaje
-- Clustering jerárquico por archivo
-- Indexación estructurada (`index.json`)
-- Persistencia separada por lenguaje
-- Análisis semántico local mediante Ollama
-- Interfaz visual PyQt6
-- Integración experimental con Synapsekai
-- Streaming SSE para monitoreo externo
-- Mapeo básico de dependencias cruzadas
+Cada componente del sistema es enriquecido con contexto, resumen técnico y clasificación estructural.
 
 ---
 
-## Lenguajes soportados
+## ⚙️ Cómo funciona
 
-| Lenguaje | Estado |
-|----------|--------|
-| Python | Estable |
-| Java | Experimental estable |
-| Cobol | Exploración futura |
+El sistema analiza el código fuente y construye un modelo estructural basado en:
 
----
+- análisis AST (Python)  
+- análisis con Tree-sitter (Java)  
+- detección automática de lenguaje  
+- indexación jerárquica del sistema  
+- agrupación de componentes relacionados  
 
-## Estado general del sistema
-
-| Área | Estado |
-|------|--------|
-| Núcleo AST Python | Estable |
-| Parser Java | Activo |
-| UI PyQt6 | Funcional |
-| IA semántica local | Funcional |
-| Integración Synapsekai | Experimental |
-| Reportes avanzados | En desarrollo |
-| Sistema multilenguaje | En evolución |
+El resultado es un conjunto de archivos estructurados en JSON que representan el sistema.
 
 ---
 
-## Filosofía del proyecto
+## 🧬 Características principales
 
-### Offline-first
-El análisis se ejecuta localmente sin depender de infraestructura cloud.
-
-### Transparencia estructural
-Las representaciones generadas deben ser interpretables y auditables.
-
-### No invasivo
-El sistema no modifica el código fuente analizado.
-
-### Modularidad
-Cada componente evoluciona de forma independiente.
-
-### Persistencia reutilizable
-Los datos generados pueden reutilizarse en otros sistemas, IA o pipelines.
+- detección automática de lenguaje (Python / Java)  
+- extracción estructural del código fuente  
+- representación jerárquica de componentes  
+- análisis semántico local con IA  
+- interfaz visual para exploración del sistema  
+- exportación de estructura en formato JSON  
 
 ---
 
-## Relación con Synapsekai
+## 🔌 Integración con otros sistemas
 
-BioBrain y Synapsekai son sistemas independientes y desacoplados que operan bajo un modelo cliente-servidor local.
+BioBrain puede exportar la estructura generada a herramientas externas mediante un flujo de datos basado en JSON.
 
-BioBrain actúa como:
-- el cliente principal y extractor estructural,
-- el indexador de código y organizador de arquitectura,
-- el proveedor de contexto (Blueprint JSON) y la interfaz de usuario (PyQt6).
-
-Synapsekai actúa como:
-- el motor biológico backend y servidor de simulación,
-- el entorno de procesamiento físico y neuronal en un volumen 3D discreto,
-- el sistema de monitoreo homeostático que calcula la fatiga y los signos vitales del código.
-
-La integración ocurre localmente mediante:
-- APIs HTTP (incluyendo el Wake-Up Service de latencia),
-- blueprints estructurales en formato JSON,
-- streaming de datos mediante Server-Sent Events (SSE).
-
+Esta integración es opcional y permite utilizar el modelo estructural en otros sistemas de análisis o visualización.
 
 ---
 
-## Alcance del sistema
+## 🧭 Filosofía del sistema
 
-BioBrain no está diseñado para ser:
-
-- un IDE,
-- un agente autónomo,
-- un generador de código,
-- un compilador,
-- ni un reemplazo de herramientas tradicionales.
-
-Su enfoque principal es:
-- interpretación estructural,
-- organización contextual,
-- representación navegable de arquitecturas de software.
----
-
-## Estado del repositorio
-
-Este repositorio documenta:
-- la evolución conceptual del sistema,
-- la arquitectura general,
-- la visión del proyecto,
-- y las capacidades actuales.
-
-La implementación interna puede cambiar con rapidez mientras el proyecto sigue en desarrollo activo.
+- análisis local (offline-first)  
+- no invasivo (no modifica el código)  
+- enfoque estructural antes que semántico  
+- salida reutilizable para otros sistemas  
+- modularidad y separación de componentes  
 
 ---
 
-## Autor
+## 🧱 Qué no es BioBrain
 
-Cristopher Joo  
-Desarrollador independiente — Chile
+BioBrain no es:
 
-> BioBrain explora formas de transformar arquitecturas de software en estructuras comprensibles, navegables y reutilizables.
+- un IDE  
+- un compilador  
+- un generador de código  
+- un agente autónomo  
+
+Es una herramienta de interpretación estructural del software.
+
+---
+
+## 📦 Lenguajes soportados
+
+- Python (estable)  
+- Java (soporte mediante Tree-sitter)  
+
+---
+
+## 👤 Autor
+
+Cristopher Joo — Chile
