@@ -65,7 +65,7 @@ Su propósito es convertir código fuente en una representación estructurada re
 
 ## Imagen 2 (Ejemplo de salida)
 
-![Interfaz de Sincronización en Tiempo Real](assets/panel02.png)
+![Estructura de Indexación Contextual Reutilizable](assets/panel02.png)
 
 
 ---
