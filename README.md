@@ -1,88 +1,58 @@
 # 🧠 BioBrain Poliglota — Visión del proyecto
 
-## Propósito
+BioBrain-Poliglota nace con una idea central:
 
-BioBrain es una herramienta de análisis estructural de software diseñada para facilitar la comprensión de proyectos complejos.
+**hacer que los sistemas de software complejos sean más fáciles de comprender.**
 
-Transforma código fuente existente en una representación organizada de su arquitectura interna, permitiendo explorar sistemas de software sin modificar su código original.
+Los proyectos modernos pueden crecer hasta convertirse en ecosistemas difíciles de explorar, especialmente cuando una persona necesita incorporarse a un código existente, mantener una aplicación heredada o comprender una arquitectura desarrollada por otros equipos.
 
-Su objetivo es reducir el tiempo necesario para comprender bases de código existentes mediante la extracción y organización automática de información técnica relevante.
+Antes de modificar un sistema, primero es necesario entenderlo.
 
----
-
-# 🌍 Qué hace
-
-BioBrain analiza proyectos de software y genera un modelo estructural basado en sus componentes internos.
-
-Actualmente permite identificar:
-
-* lenguajes utilizados
-* archivos del proyecto
-* clases
-* funciones
-* métodos
-* componentes relacionados
-* estructura jerárquica del sistema
-
-La información generada puede utilizarse para:
-
-* documentación técnica
-* análisis arquitectónico
-* exploración de código existente
-* soporte para herramientas de IA
-* visualización de estructuras de software
+BioBrain busca reducir esa barrera inicial transformando proyectos de software en representaciones estructuradas de conocimiento.
 
 ---
 
-# ⚙️ Cómo funciona
+# El problema
 
-El sistema utiliza un flujo modular:
+Comprender una base de código existente suele requerir una gran inversión de tiempo:
 
-```text
-Proyecto fuente
-        |
-        ↓
-Detección de lenguaje
-        |
-        ↓
-Router Poliglota
-        |
-        ↓
-Motores de análisis
-        |
-        ↓
-Modelo estructural
-        |
-        ↓
-Contexto enriquecido
-```
+- encontrar los componentes principales
+- identificar relaciones entre módulos
+- entender la organización interna
+- descubrir dónde vive la lógica importante
+- construir un modelo mental del sistema
 
-Los componentes principales incluyen:
+Actualmente gran parte de este proceso depende de exploración manual y experiencia previa.
 
-* análisis AST para Python
-* análisis Tree-sitter para Java
-* detección automática de lenguaje
-* extracción estructural de componentes
-* indexación jerárquica del sistema
-* generación de datos estructurados en JSON
-* análisis asistido mediante IA local
+BioBrain nace como una herramienta para ayudar a acelerar esa etapa de comprensión.
 
 ---
 
-# 🧱 Arquitectura interna
+# La idea
 
-BioBrain está diseñado mediante una separación progresiva de responsabilidades:
+BioBrain analiza un proyecto de software y construye una representación organizada de su estructura interna.
 
-* interfaz de usuario
-* coordinación del flujo de análisis
-* detección y selección de lenguaje
-* motores de extracción estructural
-* generación de contexto para IA
-* almacenamiento de información generada
+El objetivo no es modificar el código ni reemplazar el trabajo del desarrollador.
 
-Esta separación permite mejorar y extender cada componente sin afectar el funcionamiento global del sistema.
+El objetivo es transformar una colección de archivos en una representación más comprensible:
 
-El objetivo arquitectónico es mantener una base modular, mantenible y preparada para futuras extensiones.
+
+Código fuente  
+↓  
+Estructura del sistema  
+↓  
+Contexto técnico  
+↓  
+Conocimiento reutilizable
+
+
+Esta representación puede servir como base para:
+
+- exploración arquitectónica
+- documentación técnica
+- aprendizaje de sistemas existentes
+- análisis asistido por inteligencia artificial
+- herramientas externas de visualización o procesamiento
 
 ---
 
@@ -118,111 +88,103 @@ Cada componente del sistema puede ser enriquecido con:
 
 ---
 
-# 🧬 Principios de diseño
 
-BioBrain sigue los siguientes principios:
+---
+# Principios del proyecto
 
-* análisis no invasivo
-* procesamiento local
-* separación de responsabilidades
-* modularidad
-* datos reutilizables
-* evolución incremental
+## 🔍 Comprender antes de modificar
 
-El sistema busca interpretar software antes que modificarlo.
+BioBrain sigue un principio fundamental:
+
+> antes de actuar sobre un sistema, es necesario comprenderlo.
+
+El análisis se realiza de manera no invasiva, preservando el código original y enfocándose en obtener conocimiento sobre su organización.
 
 ---
 
-# 📦 Capacidades actuales
+## 🧠 Contexto antes que automatización
 
-Lenguajes soportados:
+Las herramientas inteligentes necesitan información estructurada para entregar mejores resultados.
 
-* Python
-* Java
-
-Procesamiento:
-
-* análisis estructural del código fuente
-* extracción de componentes internos
-* representación jerárquica
-* generación de modelos JSON
-* análisis asistido por IA local
-* exploración visual mediante interfaz gráfica
+BioBrain busca crear una capa de contexto que permita que humanos y sistemas inteligentes puedan interpretar mejor proyectos complejos.
 
 ---
 
-# 🚧 Estado actual
+## 🔒 Control y transparencia
 
-La versión actual se enfoca en consolidar una base estable mediante mejoras arquitectónicas:
+El usuario debe mantener control sobre sus proyectos y datos.
 
-* refactorización de componentes internos
-* separación entre interfaz, extracción y procesamiento
-* validación del flujo de análisis
-* mejora de mantenibilidad
-* fortalecimiento de la gestión de rutas y procesos internos
-
-Estas mejoras permiten que BioBrain continúe evolucionando sobre una base más segura y modular.
+Por esta razón, BioBrain prioriza flujos transparentes, procesamiento local cuando es posible y separación clara entre análisis e integraciones externas.
 
 ---
 
-# 🚀 Evolución futura
+## 🧱 Arquitectura evolutiva
 
-Las siguientes etapas contemplan ampliar la capacidad de comprensión del sistema mediante:
+BioBrain está diseñado para evolucionar progresivamente.
 
-* análisis de documentación técnica
-* visualización avanzada de arquitectura
-* integración con nuevas herramientas externas
-* soporte multimodal
-
-Una posible evolución futura es incorporar una capa de percepción visual denominada **BioBrain Vision**, orientada a interpretar información complementaria como:
-
-* diagramas arquitectónicos
-* capturas de interfaces
-* documentación visual
-* representaciones gráficas del sistema
+El proyecto busca mantener componentes independientes, responsabilidades claras y una arquitectura capaz de incorporar nuevas capacidades sin perder simplicidad.
 
 ---
 
-# 🧱 Qué no es BioBrain
+# Una visión independiente del lenguaje
+
+El software moderno utiliza múltiples lenguajes y tecnologías.
+
+BioBrain-Poliglota busca avanzar hacia una capa común de comprensión del software, donde diferentes ecosistemas puedan ser representados mediante conceptos estructurales compartidos.
+
+Los lenguajes son una forma de expresar software.
+
+El conocimiento del sistema es el objetivo.
+
+---
+
+# Relación con inteligencia artificial
+
+BioBrain no busca reemplazar al desarrollador ni convertirse en un agente autónomo que toma decisiones por sí mismo.
+
+Su propósito es preparar información estructurada que permita mejorar la interacción entre:
+
+- desarrolladores
+- herramientas de análisis
+- asistentes inteligentes
+
+Una inteligencia artificial puede responder mejor cuando dispone de contexto adecuado.
+
+BioBrain busca ayudar a construir ese contexto.
+
+---
+
+# Qué no es BioBrain
 
 BioBrain no es:
 
-* un IDE
-* un compilador
-* un generador automático de código
-* un agente autónomo que modifica sistemas
+- un IDE
+- un compilador
+- un generador automático de código
+- un reemplazo del criterio humano
 
-Es una herramienta de interpretación estructural del software.
-
----
-
-# 🔌 Integración con otros sistemas
-
-BioBrain puede exportar la estructura generada mediante datos estructurados en formato JSON.
-
-Esta información puede ser utilizada por:
-
-* herramientas de visualización
-* sistemas externos de análisis
-* asistentes de IA
-* futuras capas de procesamiento
-
-La filosofía de integración es:
-
-> BioBrain interpreta y organiza el conocimiento del software; otros sistemas pueden consumir esa información.
+Es una herramienta orientada a la comprensión, exploración y representación del conocimiento interno de sistemas de software.
 
 ---
 
-# 🧭 Filosofía
+# Visión futura
 
-BioBrain no reemplaza al desarrollador.
+La visión de BioBrain-Poliglota es explorar nuevas formas de reducir la distancia entre:
 
-Su objetivo es reducir la distancia necesaria para comprender un sistema de software complejo.
+- un sistema complejo
+- las personas que necesitan comprenderlo
+- las herramientas que pueden ayudar a analizarlo
 
-Transforma una base de código difícil de explorar en una representación estructurada que facilita su análisis, documentación y evolución.
+A largo plazo, el objetivo es facilitar una nueva forma de interactuar con software existente: no solamente leyendo código, sino comprendiendo su estructura y contexto.
 
 ---
 
-## 👤 Autor
+# Estado del proyecto
 
-Cristopher Joo — Chile
+BioBrain-Poliglota es un proyecto en evolución continua, enfocado en investigación aplicada sobre análisis de software, representación de conocimiento y herramientas asistidas por inteligencia artificial.
+
+---
+
+# Autor
+
+**Cristopher Joo — Chile**
